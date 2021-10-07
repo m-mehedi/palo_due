@@ -3,12 +3,12 @@
         
     </div>
     <x-slot name="header">
-    <div class="max-w-100mx-auto py-3 px-3 sm:px-3 lg:px-3hidden">
+    <!-- <div class="max-w-100mx-auto py-3 px-3 sm:px-3 lg:px-3hidden">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __() }}
            
         </h2>
-    </div>
+    </div> -->
     </x-slot>
 
 
