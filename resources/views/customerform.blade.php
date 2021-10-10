@@ -244,7 +244,7 @@ td{
                         if(dateinv.search("-")==-1 && dateinv.search("/")==-1){
                             let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                             var month=months[parseFloat(dateinv.slice(4, 6))-1];
-                            dateinv=dateinv.slice(0, 4)+"-"+month+"-"+dateinv.slice(6, 8);
+                            dateinv=dateinv.slice(6, 8)+"-"+month+"-"+dateinv.slice(0, 4);
 
                         }
                         // else{
