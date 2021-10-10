@@ -56,7 +56,7 @@
             <label class="pr-5"><span><a href="/register">Register</a></span></label>
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Forgot password') }}
                     </a>
                 @endif
 

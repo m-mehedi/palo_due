@@ -53,6 +53,7 @@ td{
 
 
 
+
   /* #info input[type="text"] {
      pointer-events: none;
         } */
@@ -74,7 +75,7 @@ td{
                     <!-- On rows -->
 
                   
-                    <div class="container">
+                    <div class="container pb-3">
                         
                        
                         <form action="/submit" method="POST">
@@ -89,9 +90,9 @@ td{
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="p-3 mb-3" style="background-color:rgb(255, 254, 225); border:1px solid #ccc; ">
-                                <strong style="font-weight:bold" ><h5 id="CustId">Customer ID</h5></strong>
-                                <h6 style="font-weight:bold" id="CustName">Customer Name</h6>
+                            <div  class="p-3 mb-3" style="background-color:rgb(255, 254, 225); border:1px solid #ccc; line-height: 1.1; ">
+                                <strong style="font-weight:bold" ><h8 id="CustId">Customer ID</h8></strong>
+                                <h6 class="p-0 m-0" style="font-weight:bold" id="CustName">Customer Name</h6>
                                 <small style="font-weight:bold" >Total Number of Invoice &nbsp&nbsp&nbsp :&nbsp&nbsp  </small><small id="count" style="font-weight:bold" >0</small><br>
                                 <small style="font-weight:bold" >Customer Address  &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp :&nbsp&nbsp  </small><small id="address">   </small><br>
                                 <small style="font-weight:bold" >Contact Number   &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp :&nbsp&nbsp  </small><small id="contact"></small><br>
@@ -241,7 +242,9 @@ td{
                         dateinv=value.DATEINVC;
                         //  dateinv="10/29-67";
                         if(dateinv.search("-")==-1 && dateinv.search("/")==-1){
-                            dateinv=dateinv.slice(0, 4)+"-"+dateinv.slice(4, 6)+"-"+dateinv.slice(6, 8);
+                            let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                            var month=months[parseFloat(dateinv.slice(4, 6))-1];
+                            dateinv=dateinv.slice(0, 4)+"-"+month+"-"+dateinv.slice(6, 8);
 
                         }
                         // else{
@@ -271,7 +274,8 @@ td{
 
                        
                         });
-                          totaldue=parseFloat(totaldue).toFixed(2);
+                          //totaldue=parseFloat(totaldue).toFixed(2);
+                          totaldue=parseFloat(totaldue);
                           $('input:text[name="tempTotalDue"]').val(totaldue);
                          
                         //  totaldue= new Intl.NumberFormat('en-IN').format(totaldue)

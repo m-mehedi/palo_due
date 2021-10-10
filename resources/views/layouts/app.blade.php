@@ -30,9 +30,17 @@
          
          <!-- animate css -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+         <style>
+            footer{
+                position: relative;
+                bottom:30px;
+                
+            }
+         </style>
+         
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-10" id=body_div>
+        <div class="min-h-screen bg-gray-10 pb-5" id=body_div>
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -46,7 +54,14 @@
             <main>
                 {{ $slot }}
             </main>
+           
         </div>
+        <footer class="footer">
+                <div class="container text-center">
+                    <span class="">©2021 Transcom ERP.ALL Rights Reserved</span>
+                </div>
+       </footer>
+       
          <!-- Bootsrap Javascript -->
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
        
