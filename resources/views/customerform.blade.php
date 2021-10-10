@@ -95,7 +95,7 @@ td{
                                 <small style="font-weight:bold" >Total Number of Invoice &nbsp&nbsp&nbsp :&nbsp&nbsp  </small><small id="count" style="font-weight:bold" >0</small><br>
                                 <small style="font-weight:bold" >Customer Address  &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp :&nbsp&nbsp  </small><small id="address">   </small><br>
                                 <small style="font-weight:bold" >Contact Number   &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp :&nbsp&nbsp  </small><small id="contact"></small><br>
-                                <small style="font-weight:bold" >Total Due Amount  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp&nbsp :&nbsp&nbsp </small><small id="tda" style="font-weight:bold">0</small><br>
+                                <small style="font-weight:bold" >Total Due Amount  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp&nbsp :&nbsp&nbsp </small><small id="tda" style="font-weight:bold" class="text-danger">0</small><br>
                               
                                 <small style="font-weight:bold" >Total Collection Amount  &nbsp&nbsp :&nbsp&nbsp  </small><small id="tca" style="font-weight:bold">0</small><br>
                              
