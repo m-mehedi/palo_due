@@ -63,6 +63,13 @@ td{
     font-family: Tahoma;
     src: url('{{ url('font/Tahoma.ttf') }}');
 }
+#info_div {
+
+    /* position:fixed;
+    top:0;
+    width:85%;
+    z-index:100; */
+}
 
 </style>
 
@@ -90,7 +97,8 @@ td{
                                     @endforeach
                                 </select>
                             </div>
-                            <div  class="p-3 mb-3" style="background-color:rgb(255, 254, 225); border:1px solid #ccc; line-height: 1.1; ">
+                         
+                            <div id="info_div" class="p-3 mb-3" style="background-color:rgb(255, 254, 225); border:1px solid #ccc; line-height: 1.1; ">
                                 <strong style="font-weight:bold" ><h8 id="CustId">Customer ID</h8></strong>
                                 <h6 class="p-0 m-0" style="font-weight:bold" id="CustName">Customer Name</h6>
                                 <small style="font-weight:bold" >Total Number of Invoice &nbsp&nbsp&nbsp :&nbsp&nbsp  </small><small id="count" style="font-weight:bold" >0</small><br>
@@ -102,6 +110,7 @@ td{
                              
                                 <!-- <small style="font-weight:bold" >Contact Number   &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp :&nbsp&nbsp  </small><small id="contact"></small> -->
                             </div>
+                              
                             <!-- <div id= "info" class="row mx-lg-5 px-lg-2  mb-5 border">
                                 <div class="col-12 col-md-12 col-lg-6 form-group form-inline mt-3">
                                     <label require for="inputCustId">Customer Id </label>
@@ -196,6 +205,16 @@ td{
               
 
     <script type="text/javascript">
+    $(window).scroll(function(e){ 
+  var $el = $('#info_div'); 
+  var isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 200 && !isPositionFixed){ 
+    $el.css({'position': 'fixed', 'top': '0px', 'width': '85.5%'}); 
+  }
+  if ($(this).scrollTop() < 200 && isPositionFixed){
+    $el.css({'position': 'static', 'top': '0px','width': '100%'}); 
+  } 
+});
   
     jQuery('select[name="selectCustomer"]').select2({
       placeholder: "Select a Customer"
